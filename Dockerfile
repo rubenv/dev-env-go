@@ -1,6 +1,6 @@
 FROM fedora
 
-RUN dnf install autoconf automake libtool curl git unzip make gcc-c++ golang && \
+RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang && \
     cd /tmp && \
     git clone https://github.com/google/protobuf.git && \
     cd /tmp/protobuf/ && \
@@ -8,4 +8,5 @@ RUN dnf install autoconf automake libtool curl git unzip make gcc-c++ golang && 
     ./configure && \
     make && \
     make check && \
-    make install
+    make install && \
+    rm -rf /tmp/protobuf/
