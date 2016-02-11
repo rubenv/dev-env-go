@@ -10,4 +10,5 @@ RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang 
     make check && \
     make install && \
     rm -rf /tmp/protobuf/ && \
+    dnf -y remove autoconf automake libtool unzip gcc-c++ && \
     dnf clean all
