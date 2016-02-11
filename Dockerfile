@@ -1,4 +1,4 @@
-FROM fedora
+FROM rubenv/dev-env-vim
 
 RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang && \
     cd /tmp && \
