@@ -13,6 +13,7 @@ RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang 
     dnf -y remove autoconf automake libtool unzip gcc-c++ && \
     dnf clean all && \
     mkdir -p /go && \
+    export GOPATH=/go && \
     go get -v github.com/gogo/protobuf/protoc-gen-gogo
 
 ENV GOPATH /go
