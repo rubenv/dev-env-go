@@ -1,6 +1,6 @@
 FROM rubenv/dev-env-vim
 
-RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang && \
+RUN dnf install -y autoconf automake libtool curl git unzip make gcc-c++ golang docker && \
     cd /tmp && \
     git clone https://github.com/google/protobuf.git && \
     cd /tmp/protobuf/ && \
